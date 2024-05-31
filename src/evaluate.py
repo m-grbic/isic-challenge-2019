@@ -50,8 +50,13 @@ def main():
         class_name: [v[target] for v in cls_metrics_dct.values()] for target, class_name in target2class_name.items()
     }
     metrics_df = pd.DataFrame(class2metrics)
+    
     metrics_df['Average'] = metrics_df.mean(axis=1)
     metrics_df['Metric'] = list(cls_metrics_dct.keys())
+    
+    columns_order = ['Metric', 'Average'] + [col for col in metrics_df.columns if col not in ['Metric', 'Average']]
+    metrics_df = metrics_df[columns_order]
+
     metrics_df.to_excel(f'results/{os.path.basename(config.model_path)}'.replace('.pth', '.xlsx'))
     print(metrics_df)
 

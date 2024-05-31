@@ -38,7 +38,6 @@ def test_model(model: nn.Module, test_loader: DataLoader, averaged_metrics: dict
 
     outputs=torch.cat(outputs_lst)
     labels=torch.cat(labels_lst)
-    print(labels.shape)
     print(f"Inference time: {labels.shape[0] / (et - st)} FPS")
 
 
