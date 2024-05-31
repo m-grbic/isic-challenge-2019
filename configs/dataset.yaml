@@ -1,0 +1,4 @@
+dataset_name: "1.0"
+train_perc: 0.8
+valid_perc: 0.1
+test_perc: 0.1

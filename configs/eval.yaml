@@ -1,0 +1,6 @@
+batch_size: 128
+num_workers:  10
+backbone: "convnext" # vit, convnext, efficientnet, resnet50
+model_path: "models/May29_19-07-47_139dd13b9b4e.pth"
+use_metadata: False
+dataset_name: "1.0"
