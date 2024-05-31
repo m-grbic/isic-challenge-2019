@@ -124,7 +124,6 @@ cython_debug/
 # Exclude .xlsx files
 *.xlsx
 
-# Exclude contents of runs, models, and data directories
+# Exclude contents of runs, and data directories
 runs/
-models/
 data/
